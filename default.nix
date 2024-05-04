@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
     owner = "wintermute-cell";
     repo = pname;
     rev = "v${version}";
-    sha256 = lib.fakeHash;
+    sha256 = "sha256-W0WxVwZx+2ctVmVWNh/A3VgAEZ5iSRAidRE3DQzKv1A=";
   };
 
   nativeBuildInputs = [ ];

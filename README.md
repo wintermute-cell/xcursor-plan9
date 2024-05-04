@@ -7,28 +7,36 @@ should the original source ever go down, I reuploaded it here.
 
 ## Installation
 
-1. **Clone or Download Source**  
-   Clone or download the latest version of the cursor pack source code.
-   ```bash
-   git clone https://github.com/<username>/xcursor-plan9.git
-   cd xcursor-plan9
-   ```
+### For NixOS or Nix-enabled systems:
+Clone the source:
+```bash
+git clone https://github.com/wintermute-cell/xcursor-plan9.git
+```
 
-2. **Build and Install**
-   For **NixOS** or Nix-enabled systems:
-   ```bash
-   nix-build
-   nix-env -i ./result
-   ```
+Install imperatively:
+```bash
+cd xcursor-plan9
+nix-build
+nix-env -i ./result
+```
 
-   For **Other Linux Distributions**:
-   - Copy the `plan9` directory to the appropriate cursor directory:
-   ```bash
-   sudo mkdir -p /usr/share/icons
-   sudo cp -r plan9 /usr/share/icons/
-   ```
+Or add this line to your package config where you would typically specify a
+package name:
+```nix
+(callPackage ../path/to/plan9-cursor/default.nix {})
+```
 
-#### Enable the Cursor Theme
+### For Other Linux Distributions:
+
+Copy the `plan9` directory to the appropriate cursor directory:
+
+```bash
+git clone https://github.com/wintermute-cell/xcursor-plan9.git
+sudo mkdir -p /usr/share/icons
+sudo cp -r xcursor-plan9 /usr/share/icons/
+```
+
+### Enable the Cursor Theme
 
 1. **GNOME or Unity**:
    - Install GNOME Tweaks (`gnome-tweaks` package) and select the `plan9` cursor theme.
@@ -45,4 +53,5 @@ should the original source ever go down, I reuploaded it here.
 There was no license information for the original source. Accordingly, this
 repo will stay without license.
 
-
+If you're the original creator of this theme and don't like it being hosted
+here please notify me.
